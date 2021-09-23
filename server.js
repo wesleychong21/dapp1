@@ -1,11 +1,13 @@
 const express = require ('express');
 const bodyParser = require('body-parser');
 const {save_user_information} = require('./models/server_db');
-
+const path = require('path');
+const publicpath = path.join(__dirname, './public');
 const app = express();
 
 
 app.use(bodyParser.json());
+app.use(express.static(publicpath));
 
 app.post('/', async (req, res)=>{
     var email = req.body.email;
