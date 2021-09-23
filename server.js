@@ -22,9 +22,15 @@ app.post('/', async (req, res)=>{
     res.send(result);
 })
 
+app.get('/',  (req, res)=>{
+    res.send('Successful');
+    console.log('Successful');
+})
 
-app.get('/', (req, res)=>{
-    res.send("HELLO WEB 2.0");
+app.get('/get_total_amount', async (req, res)=>{
+    var result = await get_total_amount();
+    res.send(result);
+    console.log(result);
 })
 
 
