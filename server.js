@@ -32,7 +32,7 @@ app.get('/',  (req, res)=>{
 app.get('/get_total_amount', async (req, res)=>{
     var result = await get_total_amount();
     res.send(result);
-    console.log(result);
+    
 })
 
 
