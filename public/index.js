@@ -22,7 +22,7 @@ class App extends React.Component{
             email : this.state.email
             
         })
-        console.log(response);
+        window.location.href = response.data;
     }
     render(){
         return(
